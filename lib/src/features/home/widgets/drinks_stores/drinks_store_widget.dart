@@ -15,7 +15,7 @@ class _DrinkStoreWidgetState extends State<DrinkStoreWidget> {
     return Container(
       color: Colors.red,
       child: Center(
-        child: Text('All Stores'),
+        child: Text('Bebidas'),
       ),
     );
   }

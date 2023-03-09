@@ -15,7 +15,7 @@ class _MarketsWidgetState extends State<MarketsWidget> {
     return Container(
       color: Colors.red,
       child: Center(
-        child: Text('All Stores'),
+        child: Text('Mercado'),
       ),
     );
   }

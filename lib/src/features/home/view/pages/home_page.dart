@@ -43,14 +43,19 @@ class _HomePageState extends State<HomePage>
             unselectedLabelColor: Colors.black54,
           ),
         ),
-        body: TabBarView(controller: tabController, children: const [
-          AllStoresWidget(),
-          RestaurantsWidget(),
-          MarketsWidget(),
-          DrinkStoreWidget(),
-          DrugsStoreWidget(),
-          PetStoreWidget()
-        ]),
+        body: TabBarView(
+          controller: tabController,
+          children: [
+            AllStoresWidget(
+              tabController: tabController,
+            ),
+            RestaurantsWidget(),
+            MarketsWidget(),
+            DrinkStoreWidget(),
+            DrugstoreWidget(),
+            PetStoreWidget()
+          ],
+        ),
       ),
     );
   }
