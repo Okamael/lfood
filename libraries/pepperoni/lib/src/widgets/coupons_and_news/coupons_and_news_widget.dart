@@ -51,7 +51,7 @@ class _CuponsAndNewsWidgetState extends State<CuponsAndNewsWidget> {
           builder: (context, child) => Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(widget.imageList.length, (index) {
-                final isSeleted = index == pagecontroler.page?.truncate();
+                final isSeleted = index == pagecontroler.page?.ceil();
                 return Padding(
                   padding: const EdgeInsets.all(2),
                   child: CircleAvatar(

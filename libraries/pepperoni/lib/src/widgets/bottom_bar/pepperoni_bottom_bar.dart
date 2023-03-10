@@ -22,6 +22,7 @@ class _PepperoniBottomBarState extends State<PepperoniBottomBar> {
       items: List.from(
         widget.items.map(
           (item) => BottomNavigationBarItem(
+            backgroundColor: Color(0xffFDFFFD),
             label: item.label,
             icon: PepperoniIconBar(
               icon: item.icon,

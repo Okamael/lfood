@@ -94,7 +94,25 @@ class _AllStoresWidgetState extends State<AllStoresWidget> {
             'https://static.ifood-static.com.br/image/upload/t_high,q_100/webapp/landing/landing-banner-2.png',
             'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
           ],
-        )
+        ),
+        const SizedBox(
+          height: 16.00,
+        ),
+        const AdvertisingWidget(
+          imageUrl:
+              'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
+        ),
+        const SizedBox(
+          height: 16.00,
+        ),
+        BestRestaurantsWidget(
+            restaurants: List.generate(
+          10,
+          (index) => BestRestaurantItem(
+              'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
+              index,
+              'Subway Ourinhos'),
+        )),
       ],
     );
   }
