@@ -106,13 +106,31 @@ class _AllStoresWidgetState extends State<AllStoresWidget> {
           height: 16.00,
         ),
         BestRestaurantsWidget(
-            restaurants: List.generate(
-          10,
-          (index) => BestRestaurantItem(
-              'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
-              index,
-              'Subway Ourinhos'),
-        )),
+          restaurants: List.generate(
+            10,
+            (index) => BestRestaurantItem(
+                'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
+                index,
+                'Subway Ourinhos'),
+          ),
+        ),
+        const SizedBox(height: 16),
+        const FastMenuWidget(),
+        const SizedBox(height: 16),
+        StoreListWidget(
+          stores: List.generate(
+            10,
+            (index) => StoreItem(
+                storeName: 'Mac Donalds',
+                rate: '${index / 2}',
+                price: '4.9',
+                time: '${25 + index}',
+                kindOfItem: 'Lanche',
+                imageUrl:
+                    'https://static.ifood-static.com.br/image/upload/t_high,q_100/webapp/landing/landing-banner-2.png'),
+          ),
+        ),
+        const SizedBox(height: 16),
       ],
     );
   }

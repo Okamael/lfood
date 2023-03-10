@@ -49,6 +49,7 @@ class BestRestaurantsWidget extends StatelessWidget {
                   restaurants[index].name,
                   maxLines: 2,
                   textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 12),
                 ),
               ]),
             ),
