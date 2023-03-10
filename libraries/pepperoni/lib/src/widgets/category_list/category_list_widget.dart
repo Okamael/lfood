@@ -13,16 +13,20 @@ class CategoryListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 150,
-      width: MediaQuery.of(context).size.width,
-      child: Wrap(
-        spacing: 5,
-        runSpacing: 10,
-        children: List.from(
-          items.map(
-            (item) => _CategoryItemWidget(
-              item: item,
+    return SizedBox(
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Wrap(
+            spacing: 5,
+            runSpacing: 10,
+            children: List.from(
+              items.map(
+                (item) => _CategoryItemWidget(
+                  item: item,
+                ),
+              ),
             ),
           ),
         ),
@@ -41,9 +45,12 @@ class _CategoryItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width / 4.2,
+      width: MediaQuery.of(context).size.width / 4.4,
       child: Material(
+        color: Colors.transparent,
+        borderRadius: BorderRadius.circular(8),
         child: InkWell(
+          borderRadius: BorderRadius.circular(8),
           onTap: () {
             item.onTap(item);
           },
@@ -52,15 +59,14 @@ class _CategoryItemWidget extends StatelessWidget {
             children: [
               SizedBox(
                 width: 100,
-                height: 100,
                 child: AspectRatio(
-                  aspectRatio: 1,
+                  aspectRatio: 9 / 8,
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16),
                       child: ColoredBox(
-                        color: Colors.white,
+                        color: const Color(0xffF5F8F5),
                         child: Image.network(
                           item.imagemUrl,
                           fit: BoxFit.cover,
@@ -70,7 +76,10 @@ class _CategoryItemWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(item.label),
+              Text(
+                item.label,
+                style: TextStyle(fontSize: 12),
+              ),
             ],
           ),
         ),

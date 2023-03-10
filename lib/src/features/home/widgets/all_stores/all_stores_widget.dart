@@ -83,6 +83,18 @@ class _AllStoresWidgetState extends State<AllStoresWidget> {
                     'https://i.pinimg.com/originals/7a/e2/0e/7ae20e8b68ebab2473bef78abfca6662.jpg')
           ],
         ),
+        const CuponsAndNewsWidget(
+          imageList: [
+            'https://static.ifood-static.com.br/image/upload/t_high,q_100/webapp/landing/landing-banner-1.png',
+            'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
+            'https://static.ifood-static.com.br/image/upload/t_high,q_100/webapp/landing/landing-banner-2.png',
+            'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
+            'https://static.ifood-static.com.br/image/upload/t_high,q_100/webapp/landing/landing-banner-2.png',
+            'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
+            'https://static.ifood-static.com.br/image/upload/t_high,q_100/webapp/landing/landing-banner-2.png',
+            'https://gkpb.com.br/wp-content/uploads/2020/03/ifood-tudo-por-099-geek-publicitario.jpg',
+          ],
+        )
       ],
     );
   }
